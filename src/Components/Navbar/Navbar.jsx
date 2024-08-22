@@ -9,7 +9,6 @@ const Navbar = () => {
     const location = useLocation();
     const currentPath = location.pathname;
 
-    // Update links based on the current route
     const updatedData = data.map((item) => ({
         ...item,
         link: currentPath === '/' ? item.link : '/'

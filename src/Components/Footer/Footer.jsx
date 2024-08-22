@@ -2,8 +2,18 @@ import { Box, Stack, Text } from '@chakra-ui/react';
 import React from 'react';
 
 import { data1, data2 } from './data';
+import { useLocation } from 'react-router-dom';
 
 const Footer = () => {
+    const location = useLocation();
+    const currentPath = location.pathname;
+
+    const updatedData = data1.map((item) => ({
+        ...item,
+        link: currentPath === '/' ? item.link : '/'
+    }));
+
+
     return (
         <Box p="64px 0px" gap='80px' backgroundColor='#F44A66' display='flex' flexDir='column' alignItems='center'>
             <Box display='flex' w={{ base: '90%', md: '70%' }} h='145px' justifyContent='space-between'>
@@ -32,7 +42,7 @@ const Footer = () => {
                         me={1}
 
                     >
-                        {data1.map((item) => (
+                        {updatedData.map((item) => (
                             <a
                                 style={{ color: 'black', textDecoration: 'none' }}
                                 key={item.title}
