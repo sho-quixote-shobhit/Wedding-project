@@ -20,9 +20,9 @@ const scrollAnimation = keyframes`
 
 const Contact = () => {
     return (
-        <section id="contact" style={{ backgroundColor: '#FFF1F2', padding: '100px 0px' }}>
+        <section id="portfolio" style={{ backgroundColor: '#FFF1F2', padding: '100px 0px' }}>
             <Box
-                w={{ base: '90%', md: '70%' }}
+                w={{ base: '90%', md: '90%' }}
                 gap='48px'
                 m='auto'
                 display='flex'
@@ -35,7 +35,7 @@ const Contact = () => {
                     gap='32px'
                     display='flex'
                     flexDir={{ base: 'column', lg: 'row' }}
-                    w='100%'
+                    w = {{base : '100%' , lg : '90%'}}
                 >
                     <Box
                         w={{ base: '100%', lg: '50%' }}
@@ -97,7 +97,7 @@ const Contact = () => {
                     mt="48px"
                     overflow="hidden"
                     position="relative"
-                    w='100%'
+                    w='105%'
                     order={{ base: 3, lg: 3 }}
                 >
                     <Box

@@ -33,7 +33,7 @@ const Services = () => {
 
     return (
         <section id="services" style={{ backgroundColor: '#FFF1F2', padding: '100px 0px' }}>
-            <Box w={{ base: '90%', md: '70%' }} minH='auto' gap="48px" m="auto">
+            <Box w={{ base: '90%', md: '80%' }} minH='auto' gap="48px" m="auto">
                 <Box display='flex' flexDir={{ base: 'column', lg: 'row' }} justifyContent='space-between' gap="32px" mb="32px">
                     <Box flex="1">
                         <Text

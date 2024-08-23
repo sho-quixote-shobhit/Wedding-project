@@ -11,8 +11,8 @@ const About = () => {
     return (
         <section id="about" style={{ padding: '100px 0px', backgroundColor: '#FFFFFF' }}>
             <Box
-                w={{ base: '90%', md: '70%' }}
-                h = {{base : '' , lg : '600px'}}
+                w={{ base: '90%', md: '80%' }}
+                h={{ base: '', lg: '600px' }}
                 m='auto'
                 display='flex'
                 justifyContent='space-between'
@@ -21,15 +21,53 @@ const About = () => {
                 <Box
                     w='50%'
                     position="relative"
-                    display={{base : 'none' , lg : 'flex'}}
+                    display={{ base: 'none', lg: 'flex' }}
                 >
                     <Image
                         h='60%'
                         w='70%'
                         src={r2}
                         position="absolute"
-                        top="0"
-                        left="0"
+                        top="0%"
+                        left="0%"
+                        sx={{
+                            '@media (max-width: 1900px)': {
+                                height: '40%',
+                                top: '8%'
+                            },
+                            '@media (max-width: 1800px)': {
+                                height: '40%',
+                                top: '8%'
+                            },
+                            '@media (max-width: 1700px)': {
+                                height: '40%',
+                                top: '8%'
+                            },
+                            '@media (max-width: 1600px)': {
+                                height: '40%',
+                                top: '8%'
+
+                            },
+                            '@media (max-width: 1500px)': {
+                                height: '40%',
+                                top: '8%'
+
+                            },
+                            '@media (max-width: 1400px)': {
+                                height: '35%',
+                                top: '10%'
+
+                            },
+                            '@media (max-width: 1300px)': {
+                                height: '30%',
+                                top: '15%'
+
+                            },
+                            '@media (max-width: 1200px)': {
+                                height: '30%',
+                                top: '20%'
+                            },
+                        }}
                     />
                     <Image
                         w='50%'
@@ -38,11 +76,48 @@ const About = () => {
                         position="absolute"
                         top='40%'
                         left='50%'
+                        sx={{
+                            '@media (max-width: 1900px)': {
+                                height: '40%',
+                                left: '38%'
+                            },
+                            '@media (max-width: 1800px)': {
+                                height: '40%',
+                                left: '38%'
+                            },
+                            '@media (max-width: 1700px)': {
+                                height: '40%',
+                                left: '38%'
+                            },
+                            '@media (max-width: 1600px)': {
+                                height: '40%',
+                                left: '38%'
+
+                            },
+                            '@media (max-width: 1500px)': {
+                                height: '40%',
+                                left: '38%'
+
+                            },
+                            '@media (max-width: 1400px)': {
+                                height: '35%',
+                                left: '40%'
+
+                            },
+                            '@media (max-width: 1300px)': {
+                                height: '30%',
+                                left: '45%'
+
+                            },
+                            '@media (max-width: 1200px)': {
+                                height: '30%',
+                            },
+                        }}
                     />
                 </Box>
 
                 <Box
-                    w = {{base : '100%' , lg : '50%'}}
+                    w={{ base: '100%', lg: '50%' }}
                     display='flex'
                     alignItems='center'
                 >
@@ -53,7 +128,7 @@ const About = () => {
                         flexDir='column'
                     >
                         <Text
-                            fontSize={{base: '40px' , lg : '48px'}}
+                            fontSize={{ base: '40px', lg: '48px' }}
                             fontWeight='400'
                             lineHeight='62.4px'
                             fontFamily="'Arapey', serif"
@@ -61,7 +136,7 @@ const About = () => {
                         >
                             About Us
                         </Text>
-                        <Text 
+                        <Text
                             fontSize='18px'
                             fontWeight='400'
                             lineHeight='27px'
@@ -73,17 +148,17 @@ const About = () => {
 
                         <Button
                             backgroundColor='#F44A66'
-                            p = "12px 16px 12px 16px"
-                            w = '118px'
-                            h = '43px'
+                            p="12px 16px 12px 16px"
+                            w='118px'
+                            h='43px'
                             transition='all 0.3s ease'
-                            _hover={{ 
-                                transform: 'translateY(-10px)', 
+                            _hover={{
+                                transform: 'translateY(-10px)',
                                 backgroundColor: 'transparent',
                                 color: '#F44A66',
                                 border: '2px solid #F44A66'
                             }}
-                            onClick={()=>{navigate('/about')}}
+                            onClick={() => { navigate('/about') }}
                         >
                             Learn More
                         </Button>

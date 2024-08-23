@@ -8,6 +8,7 @@ import Connect from './sections/Contact/Contact';
 import Hero from './sections/Hero/Hero';
 import Services from './sections/Services/Services';
 import Testimonials from './sections/Testimonials/Testimonials';
+import Form from './sections/Form/Form';
 
 import AboutComponent from "./Components/About/AboutComponent";
 import ServiceComponent from "./Components/Services/ServiceComponent";
@@ -25,6 +26,7 @@ const App = () => {
                             <About />
                             <Testimonials />
                             <Connect />
+                            <Form />
                         </>
                     } />
                     <Route path="/about" element={<AboutComponent />} />

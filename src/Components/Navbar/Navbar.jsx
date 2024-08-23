@@ -14,6 +14,10 @@ const Navbar = () => {
         link: currentPath === '/' ? item.link : '/'
     }));
 
+    const handleMenuItemClick = (title) => {
+        navigate('/services', { state: { title } });
+    };
+
     return (
         <section
             id="navbar"
@@ -29,7 +33,7 @@ const Navbar = () => {
             }}
         >
             <Box
-                w={{ base: '90%', md: '70%' }}
+                w={{ base: '90%', md: '80%' }}
                 h="43px"
                 m="auto auto"
                 color="black"
@@ -60,9 +64,9 @@ const Navbar = () => {
                                     {item.title} <ChevronDownIcon />
                                 </MenuButton>
                                 <MenuList>
-                                    <MenuItem>Full-Day Wedding</MenuItem>
-                                    <MenuItem>Engagement Sessions</MenuItem>
-                                    <MenuItem>Custom Albums & Prints</MenuItem>
+                                    <MenuItem onClick={() => handleMenuItemClick('Full-Day Wedding')}>Full-Day Wedding</MenuItem>
+                                    <MenuItem onClick={() => handleMenuItemClick('Engagement Sessions')}>Engagement Sessions</MenuItem>
+                                    <MenuItem onClick={() => handleMenuItemClick('Custom Albums & Prints')}>Custom Albums & Prints</MenuItem>
                                 </MenuList>
                             </Menu>
                         ) : (

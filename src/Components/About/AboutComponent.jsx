@@ -1,8 +1,13 @@
 import { Box, Text, Image } from '@chakra-ui/react';
-import React from 'react';
+import React, { useEffect } from 'react';
 import img from '../../assests/aboutImage.jpeg'
 
 const AboutComponent = () => {
+    
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <Box>
             <Box
@@ -18,7 +23,7 @@ const AboutComponent = () => {
             </Box>
 
             <Box
-                h = {{base : '600px' , lg : '830px'}}
+                h = {{base : '400px' , lg : '730px'}}
                 display='flex'
                 w = {{base : '90%' , lg : '80%'}}
                 m = 'auto auto'
