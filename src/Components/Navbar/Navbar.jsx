@@ -41,14 +41,15 @@ const Navbar = () => {
                 justifyContent="space-between"
                 alignItems="center"
             >
-                <Text
-                    cursor="pointer"
-                    fontSize="2xl"
-                    color='red'
-                    onClick={() => { navigate('/') }}
-                >
-                    Logo
-                </Text>
+                <a href = {currentPath === '/' ? '/#' : '/'}>
+                    <Text
+                        cursor="pointer"
+                        fontSize="2xl"
+                        color='red'
+                    >
+                        Logo
+                    </Text>
+                </a>
 
                 <HStack spacing="2rem" display={{ base: 'none', lg: 'flex' }}>
                     {updatedData.map((item) => (
