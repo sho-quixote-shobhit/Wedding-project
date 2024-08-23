@@ -63,28 +63,28 @@ const Footer = () => {
 
                 <Box h="21px" display='flex' justifyContent='space-between'>
                     <Text
-                        fontSize={{ base: '14px', lg: '16px' }}
+                        fontSize={{ base: '12px', lg: '16px' }}
                     >&copy; 2024 All Rights Reserved</Text>
                     <Box display='flex'>
                         <Text
-                            fontSize='14px'
+                            fontSize={{ base: '10px', lg: '14px' }}
                             fontWeight='400'
                             lineHeight='21px'
                             fontFamily="'Roboto', serif"
                             color="#4C0519"
-                            mr={2}
+                            mr = {{base : 1 , lg : 2}}
                             cursor='pointer'
                             _hover={{color : 'white'}}
                         >
                             Privacy Policy
                         </Text>
                         <Text
-                            fontSize={{ base: '12px', lg: '14px' }}
+                            fontSize={{ base: '10px', lg: '14px' }}
                             fontWeight='400'
                             lineHeight='21px'
                             fontFamily="'Roboto', serif"
                             color="#4C0519"
-                            ml={2}
+                            mr = {{base : 1 , lg : 2}}
                             cursor='pointer'
                             _hover={{color : 'white'}}
                         >

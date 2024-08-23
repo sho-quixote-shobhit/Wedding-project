@@ -154,7 +154,7 @@ const Form = () => {
                                 color: '#F44A66',
                                 border: '0.5px solid #F44A66'
                             }}
-                            w = '30%'
+                            w = {{base : '40%' , lg : '30%'}}
                         >
                             Send Message
                         </Button>
