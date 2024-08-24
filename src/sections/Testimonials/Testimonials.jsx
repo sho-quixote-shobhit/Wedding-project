@@ -28,7 +28,7 @@ const Testimonials = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-        }, 3000);
+        }, 10000);
 
         return () => clearInterval(interval);
     }, []);
@@ -38,8 +38,8 @@ const Testimonials = () => {
     };
 
     return (
-        <section id="testimonials" style={{ padding: '100px 0px', backgroundColor: '#4C0519' }}>
-            <Box w={{ base: '90%', md: '80%' }} m='auto'>
+        <section id="testimonials" style={{ padding: '100px 0px', backgroundColor: '#4C0519' }} >
+            <Box w={{ base: '90%', md: '80%' }} m='auto' h = {{base : '400px' , lg : '100%'}}>
                 {/* header */}
                 <Box display='flex' mb='32px'>
                     <Box w={{ base: '100%', lg: '40%' }}>
@@ -59,7 +59,7 @@ const Testimonials = () => {
                 {/* body */}
                 <Box display='flex' flexDirection='column' justifyContent='space-between'>
                     <Box display='flex'>
-                        <Box w = {{base : '0%' , lg : '40%'}}>
+                        <Box w={{ base: '0%', lg: '40%' }}>
                             <Image
                                 src={testimonials[currentIndex].image}
                                 alt="happy couple"
@@ -70,7 +70,7 @@ const Testimonials = () => {
                         </Box>
 
                         <Box w={{ base: '100%', lg: '60%' }} display='flex' alignItems='center' justifyContent='flex-end' ms={{ base: 0, lg: 4 }}>
-                            <Box display='flex' flexDirection='column' justifyContent='space-between'>
+                            <Box display='flex' flexDirection='column' justifyContent='space-between' >
                                 <Text
                                     fontSize='18px'
                                     fontWeight='400'
@@ -100,24 +100,23 @@ const Testimonials = () => {
                             </Box>
                         </Box>
                     </Box>
-
-                    {/* dots */}
-                    <Box display='flex' justifyContent='center' mt={8}>
-                        {testimonials.map((_, index) => (
-                            <Box
-                                key={index}
-                                w='12px'
-                                h='12px'
-                                bg={currentIndex === index ? '#F44A66' : '#FFF1F2'}
-                                borderRadius='50%'
-                                mx='4px'
-                                cursor='pointer'
-                                onClick={() => handleDotClick(index)}
-                            />
-                        ))}
-                    </Box>
                 </Box>
             </Box>
+            {/* dots */}
+            <Box display='flex' justifyContent='center' mt = {{base : 10 , lg : 8}}>
+                    {testimonials.map((_, index) => (
+                        <Box
+                            key={index}
+                            w='12px'
+                            h='12px'
+                            bg={currentIndex === index ? '#F44A66' : '#FFF1F2'}
+                            borderRadius='50%'
+                            mx='4px'
+                            cursor='pointer'
+                            onClick={() => handleDotClick(index)}
+                        />
+                    ))}
+                </Box>
         </section>
     );
 }
