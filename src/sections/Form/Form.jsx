@@ -46,9 +46,8 @@ const Form = () => {
                         </Text>
                         <Text
                             fontSize={{ base: '16px', lg: '18px' }}
-                            fontWeight='530'
                             fontFamily="'Arapey', serif"
-                            color="#4C0519"
+                            color="black"
                         >
                             We’re excited to help you capture your most cherished moments! Whether it's your wedding, engagement, or a special event, we’re dedicated to providing a photoshoot experience that highlights your unique story. Let us create lasting memories with stunning photography tailored just for you.
                         </Text>

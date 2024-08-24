@@ -39,7 +39,7 @@ const Testimonials = () => {
 
     return (
         <section id="testimonials" style={{ padding: '100px 0px', backgroundColor: '#4C0519' }} >
-            <Box w={{ base: '90%', md: '80%' }} m='auto' h = {{base : '400px' , lg : '100%'}}>
+            <Box w={{ base: '90%', md: '80%' }} m='auto' h={{ base: '500px', md: '400px', lg: '100%'}}> 
                 {/* header */}
                 <Box display='flex' mb='32px'>
                     <Box w={{ base: '100%', lg: '40%' }}>
